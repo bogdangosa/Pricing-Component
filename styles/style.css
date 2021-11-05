@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #f6f6fe;
+  font-family: 'Montserrat', sans-serif;
+}
+
+main {
+  position: relative;
+  min-height: 100vh;
+}
+
+main .background-image1 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+main .background-image2 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+main .Title-container {
+  width: 100%;
+  text-align: center;
+  padding-top: 2rem;
+  color: #6d708d;
+}
+
+main .Title-container .Title {
+  font-size: 2.5rem;
+}
+
+main .Title-container .switch-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 1rem;
+}
+
+main .Title-container .switch-container h3 {
+  padding: 0 1rem;
+}
+
+main .Title-container .switch-container .switch {
+  position: relative;
+  height: 2rem;
+  width: 4rem;
+  padding-top: 0 1rem;
+}
+
+main .Title-container .switch-container .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+main .Title-container .switch-container .switch .slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+  background: linear-gradient(to right, #a3a8f0, #696fdd);
+  border-radius: 5rem;
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+main .Title-container .switch-container .switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 1.5rem;
+  width: 1.5rem;
+  left: 4px;
+  bottom: 4px;
+  background: #ffffff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+main .Title-container .switch-container .switch input:checked + .slider:before {
+  left: 36px;
+}
+
+main .Pricing-columns-container {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  left: 15%;
+  top: 5vh;
+  width: 70%;
+  height: 65vh;
+}
+
+main .Pricing-columns-container .Pricing-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+  margin: 1rem 0;
+  background-color: #ffffff;
+  color: #494c5f;
+}
+
+main .Pricing-columns-container .Pricing-column h1 {
+  display: block;
+  font-size: 4vw;
+  padding: 1rem 0;
+}
+
+main .Pricing-columns-container .Pricing-column .hide {
+  display: none;
+}
+
+main .Pricing-columns-container .Pricing-column p {
+  padding: 1.3rem 0;
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #b3b5c6;
+}
+
+main .Pricing-columns-container .Pricing-column .last {
+  border-bottom: 1px solid #b3b5c6;
+}
+
+main .Pricing-columns-container .Pricing-column .learn-more-btn {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid transparent;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  cursor: pointer;
+}
+
+main .Pricing-columns-container .Pricing-column .learn-more-btn .background-learn-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  opacity: 1;
+  background: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+  background: linear-gradient(to right, #a3a8f0, #696fdd);
+  border-radius: 0.5rem;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  z-index: 1;
+}
+
+main .Pricing-columns-container .Pricing-column .learn-more-btn .text-learn-btn {
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: uppercase;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  z-index: 1;
+}
+
+main .Pricing-columns-container .Pricing-column .learn-more-btn:hover {
+  border: 1px solid #696fdd;
+}
+
+main .Pricing-columns-container .Pricing-column .learn-more-btn:hover .background-learn-btn {
+  opacity: 0;
+}
+
+main .Pricing-columns-container .Pricing-column .learn-more-btn:hover .text-learn-btn {
+  color: #696fdd;
+}
+
+main .Pricing-columns-container .Pricing-column1 {
+  border-radius: 2rem 0 0 2rem;
+}
+
+main .Pricing-columns-container .Pricing-column2 {
+  border-radius: 1rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#a3a8f0), to(#696fdd));
+  background: linear-gradient(to bottom, #a3a8f0, #696fdd);
+  color: #ffffff;
+  margin: 0;
+}
+
+main .Pricing-columns-container .Pricing-column2 .learn-more-btn {
+  border: 1px solid transparent;
+}
+
+main .Pricing-columns-container .Pricing-column2 .learn-more-btn .background-learn-btn {
+  background: #ffffff;
+}
+
+main .Pricing-columns-container .Pricing-column2 .learn-more-btn .text-learn-btn {
+  color: #696fdd;
+}
+
+main .Pricing-columns-container .Pricing-column2 .learn-more-btn:hover {
+  border: 1px solid #ffffff;
+}
+
+main .Pricing-columns-container .Pricing-column2 .learn-more-btn:hover .text-learn-btn {
+  color: #ffffff;
+}
+
+main .Pricing-columns-container .Pricing-column3 {
+  border-radius: 0 2rem 2rem 0;
+}
+
+footer {
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+  main .Pricing-columns-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: auto;
+    width: 80%;
+    left: 10%;
+    padding-bottom: 5rem;
+  }
+  main .Pricing-columns-container .Pricing-column {
+    border-radius: 1rem;
+    width: 100%;
+  }
+  main .Pricing-columns-container .Pricing-column h1 {
+    font-size: 2.5rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

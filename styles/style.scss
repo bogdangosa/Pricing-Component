@@ -1,0 +1,245 @@
+$clr-very-light-graish-blue: #f6f6fe;
+$clr-white: #ffffff;
+$clr-blue:#696fdd;
+$clr-light-graish-blue: #b3b5c6;
+$clr-graish-blue: #6d708d;
+$clr-dark-graish-blue: #494c5f;
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: $clr-very-light-graish-blue;
+    font-family: 'Montserrat', sans-serif;
+}
+
+main{
+    position: relative;
+    min-height: 100vh;
+
+    .background-image1{
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+
+    }
+    .background-image2{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    .Title-container{
+        width: 100%;
+        text-align: center;
+        padding-top: 2rem;
+        color: $clr-graish-blue;
+        .Title{
+            font-size: 2.5rem;
+        }
+
+        .switch-container{
+            display: flex;
+            justify-content: center;
+            padding-top: 1rem;
+            h3{
+                padding: 0 1rem;
+            }
+            .switch{
+                position: relative;
+                height: 2rem;
+                width: 4rem;
+                padding-top: 0 1rem;
+
+                input{ 
+                    opacity: 0;
+                    width: 0;
+                    height: 0;
+                }
+                
+                .slider{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    background: linear-gradient(to right,hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+                    border-radius: 5rem;
+                    cursor: pointer;
+                    transition: 0.4s;
+                }
+                .slider:before {
+                    position: absolute;
+                    content: "";
+                    height: 1.5rem;
+                    width: 1.5rem;
+                    left: 4px;
+                    bottom: 4px;
+                    background: $clr-white;
+                    transition: 0.4s;
+                    border-radius: 50%;
+                }
+                input:checked + .slider:before {
+                    left: 36px;
+                    
+                }
+                  
+                  
+            }
+        }
+
+    }
+
+    .Pricing-columns-container{
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        left: 15%;
+        top: 5vh;
+        width: 70%;
+        height: 65vh;
+
+        .Pricing-column{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding:2rem;
+            margin: 1rem 0;
+            background-color: $clr-white;
+            color:$clr-dark-graish-blue;
+            h1{
+                display: block;
+                font-size: 4vw;
+                padding:1rem 0;
+            }            
+            .hide{
+                display: none;
+            }
+            p{
+                padding: 1.3rem 0;
+                width: 100%;
+                text-align: center;
+                border-top: 1px solid $clr-light-graish-blue;
+            }
+            .last{
+                border-bottom: 1px solid $clr-light-graish-blue;
+            }
+            .learn-more-btn{
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 1.5rem;
+                padding: 1rem;
+                width: 100%;
+                border-radius: 0.5rem;
+                border:1px solid transparent;
+                transition: 0.7s;
+                cursor: pointer;
+                
+
+                .background-learn-btn{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    width: 100%;
+                    opacity: 1;
+                    background: linear-gradient(to right,hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+                    border-radius: 0.5rem;
+                    transition: 0.7s;
+                    z-index: 1;
+
+                }
+
+                .text-learn-btn{
+                    text-decoration: none;
+                    color: $clr-white;
+                    text-transform: uppercase;
+                    transition: 0.7s;
+                    z-index: 1;
+                }
+                &:hover{
+                    border:1px solid $clr-blue;
+                    .background-learn-btn{
+                        opacity: 0;
+                    }
+                    .text-learn-btn{
+                        color: $clr-blue;
+                    }
+                }
+            }
+
+        }
+
+        .Pricing-column1{
+            border-radius: 2rem 0 0 2rem;
+        }
+        
+        .Pricing-column2{
+            border-radius: 1rem;
+            background:linear-gradient(to bottom,hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+            color: $clr-white;
+            margin: 0;
+            .learn-more-btn{
+                border:1px solid transparent;
+                .background-learn-btn{
+                    background: $clr-white;
+                }
+                .text-learn-btn{
+                    color: $clr-blue;
+                }
+                &:hover{
+                    border:1px solid $clr-white;
+                    .text-learn-btn{
+                        color: $clr-white;
+                    }
+                }
+            }
+        }
+        .Pricing-column3{
+            border-radius: 0 2rem 2rem 0;
+        }
+
+    }
+
+}
+
+
+footer{
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+@media screen and(max-width:700px) {
+    main{
+        .Pricing-columns-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: auto;
+            width: 80%;
+            left: 10%;
+            .Pricing-column{
+                border-radius: 1rem;
+                width: 100%;
+                h1{
+                    font-size: 2.5rem;
+                }
+            }
+            padding-bottom: 5rem;
+        }
+    }
+}

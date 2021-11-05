@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | [Pricing Component]</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <script src="main.js" defer></script>
+  
+</head>
+<body>
+  <main>
+    <img src="images/bg-top.svg" alt="image not working" class="background-image1">
+    <img src="images/bg-bottom.svg" alt="image not working" class="background-image2">
+
+    <div class="Title-container">
+
+        <h1 class="Title">Our Pricing </h1>
+
+        <div class="switch-container">
+          <h3>Annually</h3>
+          <label class="switch" id="switch">
+            <input type="checkbox" id="switch-value">
+            <span class="slider"></span>
+          </label>
+          <h3>Monthly</h3>
+        </div>
+    </div>
+
+    <div class="Pricing-columns-container">
+      <div class="Pricing-column Pricing-column1">
+        <h2>Basic</h2>
+        <h1 class="monthly-payment hide">&dollar;19.99</h1>
+        <h1 class="anual-payment">&dollar;199.99</h1>
+        <p>500 GB Storage</p>
+        <p>2 Users Allowed</p>
+        <p class="last">Send up to 3 GB</p>
+        <div class="learn-more-btn">
+          <div class="background-learn-btn"></div>
+          <a href="#" class="text-learn-btn">Learn More</a>
+        </div>
+      </div>
+
+      <div class="Pricing-column Pricing-column2">
+        <h2>Professional</h2>
+        <h1 class="monthly-payment hide">&dollar;24.99</h1>
+        <h1 class="anual-payment">&dollar;249.99</h1>
+        <p>1 TB Storage</p>
+        <p>5 Users Allowed</p>
+        <p class="last">Send up to 10 GB</p>
+        <div class="learn-more-btn">
+          <div class="background-learn-btn"></div>
+          <a href="#" class="text-learn-btn">Learn More</a>
+        </div>
+      </div>
+
+      <div class="Pricing-column Pricing-column3">
+        <h2>Master</h2>
+        <h1 class="monthly-payment hide">&dollar;39.99</h1>
+        <h1 class="anual-payment">&dollar;399.99</h1>
+        <p>2 TB Storage</p>
+        <p>10 Users Allowed</p>
+        <p class="last">Send up to 20 GB</p>
+        <div class="learn-more-btn">
+          <div class="background-learn-btn"></div>
+          <a href="#" class="text-learn-btn">Learn More</a>
+        </div>
+      </div>
+  </div>
+
+  </main>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Bogdan Gosa</a>.
+    </div>
+  </footer>
+</body>
+</html>
