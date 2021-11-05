@@ -219,8 +219,14 @@ main{
 footer{
     position: absolute;
     bottom: 1rem;
-    width: 100%;
+    width: 80%;
+    left: 10%;
     text-align: center;
+    color: $clr-graish-blue;
+    a{
+        text-decoration: none;
+        color: $clr-blue;
+    }
 }
 
 @media screen and(max-width:700px) {
@@ -239,7 +245,8 @@ footer{
                     font-size: 2.5rem;
                 }
             }
-            padding-bottom: 5rem;
+            padding-bottom: 2rem;
         }
+        padding-bottom: 5rem;
     }
 }

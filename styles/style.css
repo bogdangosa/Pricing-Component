@@ -248,11 +248,21 @@ main .Pricing-columns-container .Pricing-column3 {
 footer {
   position: absolute;
   bottom: 1rem;
-  width: 100%;
+  width: 80%;
+  left: 10%;
   text-align: center;
+  color: #6d708d;
+}
+
+footer a {
+  text-decoration: none;
+  color: #696fdd;
 }
 
 @media screen and (max-width: 700px) {
+  main {
+    padding-bottom: 5rem;
+  }
   main .Pricing-columns-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -267,7 +277,7 @@ footer {
     height: auto;
     width: 80%;
     left: 10%;
-    padding-bottom: 5rem;
+    padding-bottom: 2rem;
   }
   main .Pricing-columns-container .Pricing-column {
     border-radius: 1rem;
